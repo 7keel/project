@@ -12,6 +12,7 @@ class AuthScreen extends StatelessWidget {
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             CupertinoTextField(
               placeholder: "Логин или Почта",
@@ -19,13 +20,31 @@ class AuthScreen extends StatelessWidget {
             CupertinoTextField(
               placeholder: "Пороль",
             ),
-            CupertinoButton.filled(
-              child: const Text("Войти"),
-              onPressed: () {},
+            const SizedBox(
+              height: 32,
             ),
-            CupertinoButton.filled(
-              child: const Text("Зарегестрироваться"),
-              onPressed: () {},
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: CupertinoButton(
+                color: Color(0xFF4631D2),
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: const Text("Войти",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                onPressed: () {},
+              ),
+            ),
+            const SizedBox(height: 19),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: CupertinoButton(
+                color: Color(0xFF4631D2),
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: const Text(
+                  "Зарегестрироваться",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                onPressed: () {},
+              ),
             )
           ],
         ),
