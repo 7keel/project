@@ -12,8 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: AppRouter.generateRoute,
+      routes: {
+        '/auth/login': (context) => AuthScreen(),
+        '/auth/register': (context) => RegisterScreen(),
+      },
       title: 'Flutter Demo',
-      home: const RegisterScreen(),
+      home: const AuthScreen(),
     );
   }
 }
