@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/common/constanst/padding_constants.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -39,55 +40,55 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   margin: EdgeInsets.symmetric(horizontal: 16),
                 ),
                 CupertinoTextField(
-                    placeholder: "Телефон",
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.white,
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 19, horizontal: 16)),
+                  placeholder: "Телефон",
+                  decoration: BoxDecoration(
+                    color: CupertinoColors.white,
+                  ),
+                  padding: AppPaddings.textfields,
+                ),
+                Container(
+                  height: 1,
+                  color: Color(0xFFE0E6ED),
+                  margin: AppPaddings.horizontal,
+                ),
+                CupertinoTextField(
+                  placeholder: "Почта",
+                  decoration: BoxDecoration(
+                    color: CupertinoColors.white,
+                  ),
+                  padding: AppPaddings.textfields,
+                ),
                 Container(
                   height: 1,
                   color: Color(0xFFE0E6ED),
                   margin: EdgeInsets.symmetric(horizontal: 16),
                 ),
                 CupertinoTextField(
-                    placeholder: "Почта",
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.white,
+                  obscureText: isObscure,
+                  suffix: CupertinoButton(
+                    onPressed: () {
+                      setState(() {
+                        isObscure = !isObscure;
+                      });
+                    },
+                    child: Icon(
+                      CupertinoIcons.eye,
+                      color: Colors.black,
                     ),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 19, horizontal: 16)),
-                Container(
-                  height: 1,
-                  color: Color(0xFFE0E6ED),
-                  margin: EdgeInsets.symmetric(horizontal: 16),
+                  ),
+                  placeholder: "Пороль",
+                  decoration: BoxDecoration(
+                    color: CupertinoColors.white,
+                  ),
+                  padding: AppPaddings.textfields,
                 ),
-                CupertinoTextField(
-                    obscureText: isObscure,
-                    suffix: CupertinoButton(
-                      onPressed: () {
-                        setState(() {
-                          isObscure = !isObscure;
-                        });
-                      },
-                      child: Icon(
-                        CupertinoIcons.eye,
-                        color: Colors.black,
-                      ),
-                    ),
-                    placeholder: "Пороль",
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.white,
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 19, horizontal: 16)),
               ],
             ),
             Positioned(
               width: MediaQuery.of(context).size.width,
               bottom: 32,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: AppPaddings.horizontal,
                 child: CupertinoButton(
                   color: Color(0xFF4631D2),
                   padding: const EdgeInsets.symmetric(vertical: 20),

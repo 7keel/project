@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/src/common/constanst/color_constants.dart';
+import 'package:flutter_application_1/src/common/constanst/padding_constants.dart';
 import 'package:flutter_application_1/src/router/routing_const.dart';
 import 'package:flutter_application_1/src/screens/auth/register_screen.dart';
 
@@ -42,20 +44,22 @@ class AuthScreen extends StatelessWidget {
               height: 32,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: AppPaddings.horizontal,
               child: CupertinoButton(
-                color: Color(0xFF4631D2),
+                color: AppColors.main,
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: const Text("Войти",
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, MainRoute);
+                },
               ),
             ),
             const SizedBox(height: 19),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: AppPaddings.horizontal,
               child: CupertinoButton(
-                color: Color(0xFF4631D2),
+                color: AppColors.main,
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: const Text(
                   "Зарегестрироваться",
