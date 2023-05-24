@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/src/profile/profile_screen.dart';
 import 'package:flutter_application_1/src/router/router.dart';
 import 'package:flutter_application_1/src/screens/auth/auth_screen.dart';
 import 'package:flutter_application_1/src/screens/auth/register_screen.dart';
@@ -28,7 +29,7 @@ class MainScreen extends StatelessWidget {
               case 1:
                 return NewslineScreen();
               case 2:
-                return AuthScreen();
+                return ProfileScreen();
               case 3:
                 return RegisterScreen();
               default:

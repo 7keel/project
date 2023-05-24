@@ -4,4 +4,6 @@ class AppColors {
   static const Color scaffoldBackground = Color(0xFFF3F4F6);
   static const Color white = Color(0xFFFFFFFF);
   static const Color main = Color(0xFF4631D2);
+  static const Color border = Color(0xFFE0E6ED);
+  static const Color icon = Color(0xFF929292);
 }
